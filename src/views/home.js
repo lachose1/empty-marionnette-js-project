@@ -19,17 +19,17 @@ var HomeView = Marionette.LayoutView.extend({
         "click @ui.massMailBtn": "handleMassMailClick"
     },
 
-    handleMassMailClick: function() {console.log("1");
+    handleMassMailClick: function() {
         var options = {
             message: "Acceptez-vous?",
             confirmLabel: "Oui",
             confirmCallback: _.bind(this.actionMassMailClick, this)
         };
 
-        POSMenu.modalContainer.show(new ConfirmModalView(options));console.log("2");
+        POSMenu.modalContainer.show(new ConfirmModalView(options));
     },
 
-    actionMassMailClick: function() {console.log("3");
+    actionMassMailClick: function() {
         alert("ok");
     }
 });
